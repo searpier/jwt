@@ -57,10 +57,10 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: |
-        aws deploy create-deployment\
-        --application-name jwt\
-        --deployment-group-name jwt-group\
-        --file-exists-behavior OVERWRITE\
-        --s3-location bucket=jwt-bucket-practice,bundleType=zip,key=jwt.zip\ 
+      run:
+        aws deploy create-deployment
+        --application-name jwt
+        --deployment-group-name jwt-group
+        --file-exists-behavior OVERWRITE
+        --s3-location bucket=jwt-bucket-practice,bundleType=zip,key=jwt.zip
         --region ap-northeast-2
