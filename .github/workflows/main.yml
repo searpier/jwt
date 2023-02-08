@@ -36,7 +36,6 @@ jobs:
     
     - name: Zip build file and deploy sh
       run: cp appspec.yml ./deploy
-           cp deploy.sh ./deploy
         
     # Jar 파일 복사
     - name: Copy Jar
