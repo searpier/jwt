@@ -30,6 +30,10 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew clean build
       
+    - name: Zip build file and deploy sh
+      run: cp ./appspec.yml ./deploy
+           cp ./deploy.sh ./deploy
+          
     # 디렉토리 생성
     - name: Make Directory
       run: mkdir -p deploy
